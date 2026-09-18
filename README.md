@@ -1,7 +1,12 @@
 # TinyTransformer-Zynq 猫狗分类系统
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/Platform-Zynq--7010-blue.svg)]()
+[![GitHub](https://img.shields.io/badge/GitHub-dingshanneu--lang%2FTinyTransformer--Zynq-181717.svg?logo=github)](https://github.com/dingshanneu-lang/TinyTransformer-Zynq)
+
 基于 Zynq-7010 FPGA 的轻量级 Transformer 猫狗分类演示系统。PC 端负责图片预处理与特征提取（MobileNetV2 + proj），FPGA 端以 int16 定点执行 Transformer 推理。
 
+> 仓库：https://github.com/dingshanneu-lang/TinyTransformer-Zynq
 > 完整设计说明见 [DESIGN.md](DESIGN.md)；历史版本与废弃路线见 [archive/README.md](archive/README.md)。
 
 ## 系统架构
@@ -180,3 +185,13 @@ MIT License - 仅供学习研究使用。
 - [Kaggle Dogs vs Cats](https://www.kaggle.com/c/dogs-vs-cats/data) 数据集
 - PyTorch / torchvision
 - PySide6 (Qt for Python)
+- Xilinx Vitis HLS / Vivado
+
+## Author
+
+Shan Ding
+Northeastern University, China
+Independent Open Source Research Project
+
+- GitHub: [@dingshanneu-lang](https://github.com/dingshanneu-lang)
+- Repository: [TinyTransformer-Zynq](https://github.com/dingshanneu-lang/TinyTransformer-Zynq)

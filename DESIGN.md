@@ -2,6 +2,8 @@
 
 > 基于 Zynq-7010 FPGA 的轻量级 Transformer 猫狗分类加速系统
 >
+> 仓库：https://github.com/dingshanneu-lang/TinyTransformer-Zynq
+>
 > 最后更新：2026-09-18
 
 ---
