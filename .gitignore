@@ -1,0 +1,85 @@
+# ============================================================
+# TinyTransformer-Zynq  .gitignore
+# 只提交源码 + 文档 + FPGA 关键源; 排除数据/权重/构建产物
+# ============================================================
+
+# ===== 数据集 (体积大, 可再下载) =====
+data/
+
+# ===== 训练产物 / 权重 (可再生成) =====
+weights/
+*.pth
+
+# ===== 历史归档 (本地保留) =====
+archive/
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+build/
+dist/
+
+# ===== IDE / 系统 =====
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ============================================================
+# FPGA 工程: 只保留少量源文件, 其余全部忽略
+# ============================================================
+
+# --- 整个 TCPServer 目录先全部忽略 ---
+TCPServer/**
+
+# --- 放行中间目录 (git 要求逐层放行) ---
+!TCPServer/pl/
+!TCPServer/pl/xform_core_hls/
+
+# --- 放行 HLS 关键源 ---
+!TCPServer/pl/xform_core_hls/xform_core.cpp
+!TCPServer/pl/xform_core_hls/gen_reference.py
+!TCPServer/pl/xform_core_hls/gen_tables.py
+!TCPServer/pl/xform_core_hls/gen_tables_q12.py
+!TCPServer/pl/xform_core_hls/xform_tables.h
+!TCPServer/pl/xform_core_hls/tb.cpp
+!TCPServer/pl/xform_core_hls/gen_ref_vectors.cpp
+!TCPServer/pl/xform_core_hls/DESIGN.md
+
+# --- 放行 HLS/部署 脚本 ---
+!TCPServer/pl/xform_core_hls/run_hls.tcl
+!TCPServer/pl/xform_core_hls/csynth_only.tcl
+!TCPServer/pl/xform_core_hls/csim_run.tcl
+!TCPServer/pl/xform_core_hls/cosim.tcl
+!TCPServer/deploy_board.tcl
+!TCPServer/gen_bootbin.tcl
+!TCPServer/program_bitstream_only.tcl
+!TCPServer/gen_boot.bif
+!TCPServer/fixed.bif
+
+# --- 放行协议测试客户端 ---
+!TCPServer/test_client.py
+
+# ===== 编译产物 / 板端可执行 =====
+*.o
+*.d
+*.elf
+*.so
+*.exe
+
+# ===== 日志 / 临时 / 崩溃转储 =====
+*.log
+*.jou
+*.dmp
+*.backup.*
+*.zip
+*.err
+out.txt
+output.txt
+ts2.log
+ts2_output.txt

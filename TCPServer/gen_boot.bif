@@ -1,0 +1,6 @@
+the_ROM_image:
+{
+  [bootloader]fsbl.elf
+  [destination_device=pl]TCPServer_wrapper.bit
+  <elf,ps7_cortexa9_0>
+}

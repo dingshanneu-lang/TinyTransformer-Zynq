@@ -1,0 +1,12 @@
+# 训练依赖
+torch>=2.0.0
+torchvision>=0.15.0
+tqdm>=4.65.0
+Pillow>=9.0.0
+numpy>=1.24.0
+
+# 可选: 用于 MobileNetV2 迁移学习
+# timm>=0.9.0
+
+# 数据集下载依赖 (可选)
+# kaggle>=1.5.0

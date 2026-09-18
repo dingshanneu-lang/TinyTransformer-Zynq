@@ -1,0 +1,7 @@
+/* Fixed BOOT.BIN generation BIF */
+the_ROM_image:
+{
+  [bootloader]D:/ZynqTinyTransformerClassification/TCPServer/TCPServer/lwIP_Server_new/export/lwIP_Server_new/sw/lwIP_Server_new/boot/fsbl.elf
+  [destination_device=pl]D:/ZynqTinyTransformerClassification/TCPServer/TCPServer/TCPServer.runs/impl_1/TCPServer_wrapper.bit
+  [destination_device=cpu, exception_level=el-3, target=baremetal]D:/ZynqTinyTransformerClassification/TCPServer/TCPServer/lwIP_app/Debug/lwIP_app.elf
+}
